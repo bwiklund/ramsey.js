@@ -8,10 +8,8 @@ class Ramsey
 
   checkGlobalScope: ->
     keys = {}
-    for key in Object.keys( _global )
-      keys[key] = true
-    for key in _globalKeysSnapshot
-      delete keys[key]
+    keys[key] = true for key in Object.keys( _global )
+    delete keys[key] for key in _globalKeysSnapshot
     @globalPollution = keys
 
   
