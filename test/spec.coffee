@@ -19,3 +19,6 @@ describe "scope inspector", ->
     ramsey = new Ramsey()
     expect( Object.keys( ramsey.globalPollution ) ).toEqual(['foo'])
 
+
+
+

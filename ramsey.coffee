@@ -4,12 +4,18 @@ class Ramsey
   constructor: -> @init()
 
   init: ->
-    globalKeysObj = {}
+    @checkGlobalScope()
+
+  checkGlobalScope: ->
+    keys = {}
     for key in Object.keys( _global )
-      globalKeysObj[key] = true
+      keys[key] = true
     for key in _globalKeysSnapshot
-      delete globalKeysObj[key]
-    @globalPollution = globalKeysObj
+      delete keys[key]
+    @globalPollution = keys
+
+  
+
 
 Ramsey::version = "0.0.1"
 
