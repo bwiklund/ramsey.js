@@ -1,7 +1,9 @@
+ramsey = window.ramsey
+
+
 describe "version", ->
 
   it "is set", ->
-    ramsey = new Ramsey()
     expect( ramsey.version ).toBe( "0.0.1" )
 
 
@@ -11,13 +13,11 @@ describe "scope inspector", ->
     delete window.foo
 
   it "can detect a clean global scope", ->
-    ramsey = new Ramsey()
-    expect( Object.keys( ramsey.globalPollution ) ).toEqual([])
+    expect( Object.keys( ramsey.berate() ) ).toEqual(['ramsey'])
 
   it "can detect a dirty global scope", ->
     window.foo = 'bar'
-    ramsey = new Ramsey()
-    expect( Object.keys( ramsey.globalPollution ) ).toEqual(['foo'])
+    expect( Object.keys( ramsey.berate() ) ).toEqual(['ramsey','foo'])
 
 
 

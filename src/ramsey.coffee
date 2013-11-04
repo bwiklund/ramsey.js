@@ -2,20 +2,17 @@ _global = this
 
 
 class Ramsey
-  constructor: -> @init()
+  constructor: -> 
+    @globalVarsWhenLoaded = Object.keys _global
 
-  init: ->
-    @checkGlobalScope()
-
-  checkGlobalScope: ->
+  berate: ->
     keys = {}
     keys[key] = true for key in Object.keys( _global )
-    delete keys[key] for key in _globalVarsWhenLoaded
-    @globalPollution = keys
+    delete keys[key] for key in @globalVarsWhenLoaded
+    keys
 
 
 Ramsey::version = "0.0.1"
 
-_global.Ramsey = Ramsey
+_global.ramsey = new Ramsey
 
-_globalVarsWhenLoaded = Object.keys _global

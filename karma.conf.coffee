@@ -6,7 +6,7 @@ module.exports = (config) ->
     frameworks: ["jasmine"]
 
     preprocessors:
-      "ramsey.coffee": ["coffee"]
+      "src/ramsey.coffee": ["coffee"]
       "test/**/*.coffee": ["coffee"]
 
     coffeePreprocessor:
@@ -14,7 +14,7 @@ module.exports = (config) ->
         bare: false
         sourceMap: false
 
-    files: ["ramsey.coffee", "test/**/*.coffee"]
+    files: ["src/ramsey.coffee", "test/**/*.coffee"]
     
     exclude: []
     
