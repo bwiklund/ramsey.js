@@ -16,7 +16,7 @@ describe "scope inspector", ->
     expect( Object.keys( ramsey.berate() ) ).toEqual(['ramsey'])
 
   it "can return an array of strings", ->
-    expect( ramsey.berateAsStrings() ).toEqual(['ramsey'])
+    expect( ramsey.berateAsArray() ).toEqual(['ramsey'])
 
   it "can detect a dirty global scope", ->
     window.foo = 'bar'

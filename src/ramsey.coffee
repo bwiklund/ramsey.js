@@ -11,7 +11,7 @@ class Ramsey
     delete keys[key] for key in @globalVarsWhenLoaded
     keys
 
-  berateAsStrings: ->
+  berateAsArray: ->
     Object.keys @berate()
 
 
