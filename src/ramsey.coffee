@@ -11,6 +11,9 @@ class Ramsey
     delete keys[key] for key in @globalVarsWhenLoaded
     keys
 
+  berateAsStrings: ->
+    Object.keys @berate()
+
 
 Ramsey::version = "0.0.1"
 
