@@ -1,7 +1,7 @@
 {
   "name": "ramsey.js",
   "version": "0.0.0",
-  "description": "A tiny js utility to detect global leaks",
+  "description": "A tiny javascript utility to detect global leaks",
   "main": "index.js",
   "keywords": [
     "global",
