@@ -1,0 +1,35 @@
+{
+  "name": "ramsey.js",
+  "version": "0.0.0",
+  "description": "A tiny js utility to detect global leaks",
+  "main": "index.js",
+  "keywords": [
+    "global",
+    "leak",
+    "detector",
+    "util"
+  ],
+  "scripts": {
+    "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bwiklund/ramsey.js.git"
+  },
+  "author": "Ben Wiklund",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/bwiklund/ramsey.js/issues"
+  },
+  "devDependencies": {
+    "karma-script-launcher": "~0.1.0",
+    "karma-chrome-launcher": "~0.1.0",
+    "karma-firefox-launcher": "~0.1.0",
+    "karma-html2js-preprocessor": "~0.1.0",
+    "karma-jasmine": "~0.1.3",
+    "karma-requirejs": "~0.1.0",
+    "karma-coffee-preprocessor": "~0.1.0",
+    "karma-phantomjs-launcher": "~0.1.0",
+    "karma": "~0.10.4"
+  }
+}

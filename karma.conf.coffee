@@ -28,7 +28,7 @@ module.exports = (config) ->
     
     autoWatch: true
     
-    browsers: ["Chrome"]
+    browsers: ["PhantomJS"]
     
     captureTimeout: 60000
     
